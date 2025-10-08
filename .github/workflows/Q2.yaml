@@ -1,0 +1,32 @@
+name: Q2 - Archiver TOTO avec nom et date
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  archive-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Créer Q2_archive_README.md
+        run: |
+          echo "Nom : MANGEANT Thibault" > Q2_archive_TOTO.txt
+          echo "Date et heure : $(date)" >> Q2_archive_TOTO.txt
+          echo "" >> Q2_archive_TOTO.txt
+          cat TOTO.txt >> Q2_archive_TOTO.txt
+          du TOTO.txt >> Q2_archive_TOTO.txt
+
+      - name: Config
+        run: |
+          git config --global user.name ThibaultMangeant
+          git config --global user.email thibault.mangeant@gmail.com
+
+      - name: Commit et push
+        run: |
+          git add Q2_archive_TOTO.txt
+          git commit -m "Q2: Archive TOTO.txt avec nom et date" || echo "Aucun changement"
+          git push

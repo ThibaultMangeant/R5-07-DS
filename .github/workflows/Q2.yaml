@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Créer Q2_archive_README.md
+      - name: Créer Q2_archive_TOTO.txt
         run: |
           echo "Nom : MANGEANT Thibault" > Q2_archive_TOTO.txt
           echo "Date et heure : $(date)" >> Q2_archive_TOTO.txt

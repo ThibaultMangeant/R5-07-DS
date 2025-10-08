@@ -6,7 +6,7 @@ permissions:
   contents: write
 
 jobs:
-  copy-readme:
+  copy-toto:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout du dépôt

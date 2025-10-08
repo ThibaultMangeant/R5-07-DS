@@ -1,0 +1,31 @@
+name: Q5 - Archiver Q5.java avec date
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Créer archive Q5
+        run: |
+          DATE=$(date +'%d-%m-%Y')
+          echo "Nom : MANGEANT Thibault" > Q5_archive_${DATE}.txt
+          echo "" >> Q5_archive_${DATE}.txt
+          cat Q5.java >> Q5_archive_${DATE}.txt
+
+      - name: Config
+        run: |
+          git config --global user.name ThibaultMangeant
+          git config --global user.email mangeant.thibault@gmail.com
+
+      - name: Commit et push
+        run: |
+          git add Q5_archive_*.txt
+          git commit -m "Q5: Archive Q5.java avec date" || echo "Aucun changement"
+          git push

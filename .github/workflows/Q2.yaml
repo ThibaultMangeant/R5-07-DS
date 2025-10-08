@@ -1,13 +1,12 @@
 name: Q2 - Archiver TOTO avec nom et date
 
-on:
-  workflow_dispatch:
+on: [push]
 
 permissions:
   contents: write
 
 jobs:
-  archive-readme:
+  archive-toto:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

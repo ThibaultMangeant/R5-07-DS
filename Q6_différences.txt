@@ -1,1 +1,4 @@
-Pas d'archive précédente
+19c19
+< 				System.out.print("X ");
+---
+> 				System.out.print("Y ");

@@ -1,7 +1,6 @@
 name: Q4 - Archiver Q4.java avec date
 
-on:
-  workflow_dispatch:
+on: [push]
 
 permissions:
   contents: write

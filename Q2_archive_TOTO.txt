@@ -1,5 +1,5 @@
 Nom : MANGEANT Thibault
-Date et heure : Wed Oct  8 14:12:46 UTC 2025
+Date et heure : Wed Oct  8 14:14:44 UTC 2025
 
 Le fichier TOTO.txt
 4	TOTO.txt

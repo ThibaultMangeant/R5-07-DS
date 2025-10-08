@@ -1,6 +1,7 @@
 name: Q6 - Archiver Q6.java avec comparaison
 
-on: [push]
+on:
+  workflow_dispatch:
 
 permissions:
   contents: write

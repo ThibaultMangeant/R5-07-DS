@@ -1,6 +1,7 @@
 name: Q3 - Archiver le code Java
 
-on: [push]
+on:
+  workflow_dispatch:
 
 permissions:
   contents: write
